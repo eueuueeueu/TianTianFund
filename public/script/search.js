@@ -17,13 +17,17 @@
   function initSearchHistory(arr) {
     if (arr === undefined) return
     let search_history = document.querySelector('#search_history')
-    search_history.innerHTML =
-      `
-          <div class="flex justify-between py-[2vw] items-center">
-            <h1 class="text-[5.5vw] mb-[1vw]">搜索历史</h1>
-            <i class="clear_History">E</i>
-          </div>
-      `
+    search_history.innerHTML = ''
+    let search_item = createElement('div', { className: 'flex justify-between py-[2vw] items-center' })
+    let search_item_h1 = createElement('h1', { className: 'text-[5.5vw] mb-[1vw]' }, '搜索历史')
+    let search_item_i = createElement('i', { className: 'clear_History' }, 'E')
+    search_item_i.addEventListener('click', () => {
+      store.clear()
+      search_history.innerHTML = ''
+    })
+    search_item.appendChild(search_item_h1)
+    search_item.appendChild(search_item_i)
+    search_history.appendChild(search_item)
     let div = createElement('div', { className: 'w-full flex flex-wrap' })
     arr.forEach(item => {
       let div_item = createElement('div', { className: 'search_history_item px-[4vw] h-[10vw] bg-[#f5f5f5] rounded-[10vw] text-center leading-[10vw] mx-[1vw] my-[1vw]' }, `${item}`)
@@ -117,7 +121,10 @@
     let bs = new BScroll('.wrapper1', {
       click: true
     })
-    dataBody_content_item.addEventListener('click', () => setLocalStorage(value))
+    dataBody_content_item.addEventListener('click', () => {
+      setLocalStorage(value)
+      location.href = './FundDetails.html'
+    })
   }
   function axiosFund(key) {
     const BASE_URL = 'https://tiantian-fund-api.vercel.app'
