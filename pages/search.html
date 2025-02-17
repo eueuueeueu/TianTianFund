@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>search</title>
+</head>
+
+<body class="m-0 p-0 box-border bg-[#f5f5f5] overflow-hidden">
+  <div class="relative flex justify-between w-full h-[8vh] pl-[5vw] py-[3vw]">
+    <i class="absolute top-[50%] -translate-y-[50%] left-[7vw] text-[#9c9ca1]">Q</i>
+    <input type="search" id="search" class="w-[85%] h-full bg-white rounded-[15px] outline-none pl-[10vw]"
+      placeholder="请输入搜索内容">
+    <button class="flex-1 text-[4.5vw]">取消</button>
+  </div>
+  <div class="w-full bg-white px-[5vw] mb-[3vw]" id="search_history">
+    <!-- <div class="flex justify-between py-[2vw] items-center">
+      <h1 class="text-[5.5vw] mb-[1vw]">搜索历史</h1>
+      <i>E</i>
+    </div>
+    <div class="w-full flex flex-wrap">
+      <div class="px-[4vw] h-[10vw] bg-[#f5f5f5] rounded-[10vw] text-center leading-[10vw] mx-[1vw] my-[1vw]">易方达</div>
+      <div class="px-[4vw] h-[10vw] bg-[#f5f5f5] rounded-[10vw] text-center leading-[10vw] mx-[1vw] my-[1vw]">易121方达
+      </div>
+      <div class="px-[4vw] h-[10vw] bg-[#f5f5f5] rounded-[10vw] text-center leading-[10vw] mx-[1vw] my-[1vw]">易方达</div>
+      <div class="px-[4vw] h-[10vw] bg-[#f5f5f5] rounded-[10vw] text-center leading-[10vw] mx-[1vw] my-[1vw]">易方21达
+      </div>
+      <div class="px-[4vw] h-[10vw] bg-[#f5f5f5] rounded-[10vw] text-center leading-[10vw] mx-[1vw] my-[1vw]">易方达</div>
+      <div class="px-[4vw] h-[10vw] bg-[#f5f5f5] rounded-[10vw] text-center leading-[10vw] mx-[1vw] my-[1vw]">易方达</div>
+      <div class="px-[4vw] h-[10vw] bg-[#f5f5f5] rounded-[10vw] text-center leading-[10vw] mx-[1vw] my-[1vw]">易方21111达
+      </div>
+      <div class="px-[4vw] h-[10vw] bg-[#f5f5f5] rounded-[10vw] text-center leading-[10vw] mx-[1vw] my-[1vw]">易方达</div>
+    </div> -->
+  </div>
+  <div class="w-full bg-white px-[5vw] py-[2vw]" id="hot_search_fund">
+    <h1 class="text-[5.5vw] mb-[1vw]">热搜基金</h1>
+    <div class="flex w-full flex-wrap">
+      <div class="w-1/2 whitespace-nowrap overflow-hidden text-ellipsis text-[4.5vw] pr-[2vw]">
+        <span class="text-[#ff435d] text-[5vw]">1</span>
+        永赢先进制造智选混和大户东京奥几次哦啊哈哦
+      </div>
+      <div class="w-1/2 whitespace-nowrap overflow-hidden text-ellipsis text-[4.5vw] pr-[2vw]">
+        <span class="text-[#ff5103] text-[5vw]">2</span>
+        国泰黄金ETF联接A大红包打卡但打开奥几次哦啊哈哦
+      </div>
+      <div class="w-1/2 whitespace-nowrap overflow-hidden text-ellipsis text-[4.5vw] pr-[2vw]">
+        <span class="text-[#ffa110] text-[5vw]">3</span>
+        易方达中证人工智能大大萨达大户东京奥几次哦啊哈哦
+      </div>
+      <div class="w-1/2 whitespace-nowrap overflow-hidden text-ellipsis text-[4.5vw] pr-[2vw]">
+        <span class="text-[#999999] text-[5vw]">4</span>
+        国泰黄金ETF联接C啊看看几公斤和大户东京奥几次哦啊哈哦
+      </div>
+
+    </div>
+  </div>
+  <div class="w-full bg-white" id="search_block">
+    <!-- <div class="flex justify-around border-b-1 border-b-gray-300">
+      <div class="h-[8vh] leading-[8vh] text-[4.5vw] text-[#ff581c] border-b-2">全部</div>
+      <div class="h-[8vh] leading-[8vh] text-[4.5vw]">基金</div>
+      <div class="h-[8vh] leading-[8vh] text-[4.5vw]">实盘</div>
+    </div>
+    <div class="px-[3vw]">
+      <h1 class="text-[5vw] w-full h-[7vh] leading-[7vh]">基金</h1>
+      <div class="w-full h-[77vh] wrapper overflow-hidden">
+        <div>
+          <div class="w-full h-[15vw] py-[1vh] flex flex-col">
+            <div class="w-full h-1/2 flex justify-between">
+              <span>东财数字经济A</span>
+              <span class="text-[#ff0101]">44.88%</span>
+            </div>
+            <div class="w-full h-1/2 flex justify-between">
+              <div class="flex items-center">
+                <span>015096</span>
+                <span
+                  class="inline-block ml-[2vw] bg-[#edf6ff] text-[#54aaff] text-[12px] p-[.3vw] rounded-[10vw]">混合型-偏股</span>
+              </div>
+              <span class="text-[#a9a9a9] text-[4vw]">近1年</span>
+            </div>
+          </div>
+          <div class="w-full h-[15vw] py-[1vh] flex flex-col">
+            <div class="w-full h-1/2 flex justify-between">
+              <span>东财数字经济A</span>
+              <span class="text-[#ff0101]">44.88%</span>
+            </div>
+            <div class="w-full h-1/2 flex justify-between">
+              <div class="flex items-center">
+                <span>015096</span>
+                <span
+                  class="inline-block ml-[2vw] bg-[#edf6ff] text-[#54aaff] text-[12px] p-[.3vw] rounded-[10vw]">混合型-偏股</span>
+              </div>
+              <span class="text-[#a9a9a9] text-[4vw]">近1年</span>
+            </div>
+          </div>
+          <div class="w-full h-[15vw] py-[1vh] flex flex-col">
+            <div class="w-full h-1/2 flex justify-between">
+              <span>东财数字经济A</span>
+              <span class="text-[#ff0101]">44.88%</span>
+            </div>
+            <div class="w-full h-1/2 flex justify-between">
+              <div class="flex items-center">
+                <span>015096</span>
+                <span
+                  class="inline-block ml-[2vw] bg-[#edf6ff] text-[#54aaff] text-[12px] p-[.3vw] rounded-[10vw]">混合型-偏股</span>
+              </div>
+              <span class="text-[#a9a9a9] text-[4vw]">近1年</span>
+            </div>
+          </div>
+          <div class="w-full h-[15vw] py-[1vh] flex flex-col">
+            <div class="w-full h-1/2 flex justify-between">
+              <span>东财数字经济A</span>
+              <span class="text-[#ff0101]">44.88%</span>
+            </div>
+            <div class="w-full h-1/2 flex justify-between">
+              <div class="flex items-center">
+                <span>015096</span>
+                <span
+                  class="inline-block ml-[2vw] bg-[#edf6ff] text-[#54aaff] text-[12px] p-[.3vw] rounded-[10vw]">混合型-偏股</span>
+              </div>
+              <span class="text-[#a9a9a9] text-[4vw]">近1年</span>
+            </div>
+          </div>
+          <div class="w-full h-[15vw] py-[1vh] flex flex-col">
+            <div class="w-full h-1/2 flex justify-between">
+              <span>东财数字经济A</span>
+              <span class="text-[#ff0101]">44.88%</span>
+            </div>
+            <div class="w-full h-1/2 flex justify-between">
+              <div class="flex items-center">
+                <span>015096</span>
+                <span
+                  class="inline-block ml-[2vw] bg-[#edf6ff] text-[#54aaff] text-[12px] p-[.3vw] rounded-[10vw]">混合型-偏股</span>
+              </div>
+              <span class="text-[#a9a9a9] text-[4vw]">近1年</span>
+            </div>
+          </div>
+          <div class="w-full h-[15vw] py-[1vh] flex flex-col">
+            <div class="w-full h-1/2 flex justify-between">
+              <span>东财数字经济A</span>
+              <span class="text-[#ff0101]">44.88%</span>
+            </div>
+            <div class="w-full h-1/2 flex justify-between">
+              <div class="flex items-center">
+                <span>015096</span>
+                <span
+                  class="inline-block ml-[2vw] bg-[#edf6ff] text-[#54aaff] text-[12px] p-[.3vw] rounded-[10vw]">混合型-偏股</span>
+              </div>
+              <span class="text-[#a9a9a9] text-[4vw]">近1年</span>
+            </div>
+          </div>
+          <div class="w-full h-[15vw] py-[1vh] flex flex-col">
+            <div class="w-full h-1/2 flex justify-between">
+              <span>东财数字经济A</span>
+              <span class="text-[#ff0101]">44.88%</span>
+            </div>
+            <div class="w-full h-1/2 flex justify-between">
+              <div class="flex items-center">
+                <span>015096</span>
+                <span
+                  class="inline-block ml-[2vw] bg-[#edf6ff] text-[#54aaff] text-[12px] p-[.3vw] rounded-[10vw]">混合型-偏股</span>
+              </div>
+              <span class="text-[#a9a9a9] text-[4vw]">近1年</span>
+            </div>
+          </div>
+          <div class="w-full h-[15vw] py-[1vh] flex flex-col">
+            <div class="w-full h-1/2 flex justify-between">
+              <span>东财数字经济A</span>
+              <span class="text-[#ff0101]">44.88%</span>
+            </div>
+            <div class="w-full h-1/2 flex justify-between">
+              <div class="flex items-center">
+                <span>015096</span>
+                <span
+                  class="inline-block ml-[2vw] bg-[#edf6ff] text-[#54aaff] text-[12px] p-[.3vw] rounded-[10vw]">混合型-偏股</span>
+              </div>
+              <span class="text-[#a9a9a9] text-[4vw]">近1年</span>
+            </div>
+          </div>
+          <div class="w-full h-[15vw] py-[1vh] flex flex-col">
+            <div class="w-full h-1/2 flex justify-between">
+              <span>东财数字经济A</span>
+              <span class="text-[#ff0101]">44.88%</span>
+            </div>
+            <div class="w-full h-1/2 flex justify-between">
+              <div class="flex items-center">
+                <span>015096</span>
+                <span
+                  class="inline-block ml-[2vw] bg-[#edf6ff] text-[#54aaff] text-[12px] p-[.3vw] rounded-[10vw]">混合型-偏股</span>
+              </div>
+              <span class="text-[#a9a9a9] text-[4vw]">近1年</span>
+            </div>
+          </div>
+          <div class="w-full h-[15vw] py-[1vh] flex flex-col">
+            <div class="w-full h-1/2 flex justify-between">
+              <span>东财数字经济A</span>
+              <span class="text-[#ff0101]">44.88%</span>
+            </div>
+            <div class="w-full h-1/2 flex justify-between">
+              <div class="flex items-center">
+                <span>015096</span>
+                <span
+                  class="inline-block ml-[2vw] bg-[#edf6ff] text-[#54aaff] text-[12px] p-[.3vw] rounded-[10vw]">混合型-偏股</span>
+              </div>
+              <span class="text-[#a9a9a9] text-[4vw]">近1年</span>
+            </div>
+          </div>
+          <div class="w-full h-[15vw] py-[1vh] flex flex-col">
+            <div class="w-full h-1/2 flex justify-between">
+              <span>东财数字经济A</span>
+              <span class="text-[#ff0101]">44.88%</span>
+            </div>
+            <div class="w-full h-1/2 flex justify-between">
+              <div class="flex items-center">
+                <span>015096</span>
+                <span
+                  class="inline-block ml-[2vw] bg-[#edf6ff] text-[#54aaff] text-[12px] p-[.3vw] rounded-[10vw]">混合型-偏股</span>
+              </div>
+              <span class="text-[#a9a9a9] text-[4vw]">近1年</span>
+            </div>
+          </div>
+          <div class="w-full h-[15vw] py-[1vh] flex flex-col">
+            <div class="w-full h-1/2 flex justify-between">
+              <span>东财数字经济A</span>
+              <span class="text-[#ff0101]">44.88%</span>
+            </div>
+            <div class="w-full h-1/2 flex justify-between">
+              <div class="flex items-center">
+                <span>015096</span>
+                <span
+                  class="inline-block ml-[2vw] bg-[#edf6ff] text-[#54aaff] text-[12px] p-[.3vw] rounded-[10vw]">混合型-偏股</span>
+              </div>
+              <span class="text-[#a9a9a9] text-[4vw]">近1年</span>
+            </div>
+          </div>
+          <div class="w-full h-[15vw] py-[1vh] flex flex-col">
+            <div class="w-full h-1/2 flex justify-between">
+              <span>东财数字经济A</span>
+              <span class="text-[#ff0101]">44.88%</span>
+            </div>
+            <div class="w-full h-1/2 flex justify-between">
+              <div class="flex items-center">
+                <span>015096</span>
+                <span
+                  class="inline-block ml-[2vw] bg-[#edf6ff] text-[#54aaff] text-[12px] p-[.3vw] rounded-[10vw]">混合型-偏股</span>
+              </div>
+              <span class="text-[#a9a9a9] text-[4vw]">近1年</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+  </div>
+</body>
+<script src="../public/lib/lodash.min.js"></script>
+<script src="../public/lib/axios.min.js"></script>
+<script src="../public/lib/store.js"></script>
+<script src="../public/lib/tailwindcss4.0.6.js"></script>
+<script src="../public/lib/BetterScroll.min.js"></script>
+<script src="../public/script/utils.js"></script>
+<script src="../public/script/search.js"></script>
+
+</html>
