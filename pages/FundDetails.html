@@ -9,13 +9,66 @@
 
 <body
   class="m-0 p-0 px-[10px] overflow-hidden box-border w-screen h-screen bg-gradient-to-b from-[#e93c06] from-0% via-[#f5f5f5] via-40% to-[#f5f5f5] to-0%">
-  <div class="w-full h-[150px] mt-[10px] pl-[10px] py-[10px] rounded-[8px] bg-[#fff]">
-    <div class="w-full flex justify-between">
+  <div class="fundDetailsNav w-full h-[25vh] mt-[10px] pl-[10px] py-[10px] rounded-[8px] bg-[#fff]">
+    <!-- <div class="w-full flex justify-between">
       <h1 class="w-[70vw] text-[5vw] font-[600] leading-[6vw]">易方达中证港股通互联网ETF发起式联接A</h1>
       <div class="w-[15vw] h-[7vw] flex justify-center items-center rounded-[10vw] bg-[#e5f3ff] text-[#1693ff]">诊断</div>
     </div>
+    <div class="w-full mt-[1vw] flex">
+      <span class="text-[#b6b6b6]">019313</span>
+      <span class="flex justify-center items-center bg-[#e5f3ff] text-[#1693ff] ml-[2vw] text-[3.5vw]">指数型-船票</span>
+      <span class="flex justify-center items-center bg-[#e5f3ff] text-[#1693ff] ml-[2vw] text-[3.5vw]">中高风险</span>
+    </div>
+    <div class="w-full flex pr-[10px] items-end justify-between mt-[3vw]">
+      <div class="flex flex-col">
+        <div class="flex text-[#ff0101]">
+          <p class="text-[8vw]">7.58</p>
+          <span class="translate-x-[1vw] translate-y-[3.2vw]">%</span>
+        </div>
+        <span class="text-[#b6b6b6] -translate-y-[1vw] text-[3.2vw]">日涨幅02-14</span>
+      </div>
+      <div class="flex flex-col">
+        <p class="text-[5vw] -translate-y-[1.5vw]">1.3544</p>
+        <span class="text-[#b6b6b6] -translate-y-[1vw] text-[3.2vw]">净值</span>
+      </div>
+      <div class="flex flex-col">
+        <div class="flex text-[#ff0101]">
+          <p class="text-[6vw]">74.15</p>
+          <span class="translate-x-[1vw] translate-y-[3.2vw]">%</span>
+        </div>
+        <span class="text-[#b6b6b6] -translate-y-[1vw] text-[3.2vw]">近一年</span>
+      </div>
+    </div> -->
+  </div>
+  <div class="flex justify-between items-center px-[2vw] w-full h-[7vh] bg-[#fff] rounded-[8px] my-[3vw]">
+    <p>关联指数 | 中证港股通互联网指数</p>
+    <span class="text-[#6b6b6b] text-[4vw]">详情 ></span>
+  </div>
+  <div class="w-full h-[11vh] py-[1vh] bg-[#fff] rounded-[8px] flex flex-col">
+    <div class="flex justify-between items-center px-[2vw] w-full h-[6vh] bg-[#fff] rounded-[8px]">
+      <p>易方达基金财富号</p>
+      <span class="text-[#6b6b6b] text-[4vw]">机构主页 ></span>
+    </div>
+    <div class="flex justify-between items-center px-[2vw] w-full h-[6vh] bg-[#fff] rounded-[8px]">
+      <div class="flex">
+        <span class="flex justify-center items-center bg-[#e5f3ff] text-[#1693ff] mr-[2vw] text-[3.5vw]">市场</span>
+        <p class="text-[4vw]">掘金AI!近一周涨超10%!</p>
+      </div>
+      <span class="text-[#6b6b6b] text-[3.5vw]">02-12</span>
+    </div>
+  </div>
+  <div class="w-full bg-[#fff] my-[3vw] rounded-[8px]">
+    <div class="flex justify-around items-center w-full h-[7vh]">
+      <div
+        class="font-[600] relative before:content-[''] before:absolute before:bottom-0 before:translate-y-1 before:left-[50%] before:-translate-x-[50%] before:w-5 before:h-1 before:bg-red-500">
+        累计收益</div>
+      <div>单位净值</div>
+      <div>累计净值</div>
+    </div>
+    <div class="w-full h-[30vh]" id="charts1"></div>
   </div>
 </body>
+<script src="../public/lib/echarts.min.js"></script>
 <script src="../public/lib/tailwindcss4.0.6.js"></script>
 <script src="../public/lib/axios.min.js"></script>
 <script src="../public/script/FundDetails.js"></script>

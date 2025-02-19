@@ -45,7 +45,7 @@
     search_history.appendChild(div)
   }
   function setLocalStorage(value) {
-    console.log(store.get('setStorage'));//第一次是undefined
+    // console.log(store.get('setStorage'));//第一次是undefined
     let arr = store.get('setStorage') ?? []
     arr.unshift(value)
     store.set('setStorage', arr = [...new Set(arr)])
@@ -89,18 +89,18 @@
         .then(result => {
           yearAddCount = result.data.Datas[4].syl
 
-          let div = createElement('div', { className: 'w-full h-[15vw] py-[1vh] flex flex-col' },
+          let div = createElement('div', { className: 'w-full h-[15vw] py-[1vh] flex flex-col', id: `${item_code}` },
             `
-            <div class="w-full h-1/2 flex justify-between">
-              <span class="w-[80vw] whitespace-nowrap overflow-hidden text-ellipsis">${item_name}</span>
-              <span class="text-[#ff0101]">${yearAddCount}%</span>
+            <div data-id='${item_code}' class="w-full h-1/2 flex justify-between">
+              <span data-id='${item_code}' class="w-[80vw] whitespace-nowrap overflow-hidden text-ellipsis">${item_name}</span>
+              <span data-id='${item_code}' class="text-[#ff0101]">${yearAddCount}%</span>
             </div>
-            <div class="w-full h-1/2 flex justify-between">
-              <div class="flex items-center">
-                <span>${item_code}</span>
-                <span class="inline-block ml-[2vw] bg-[#edf6ff] text-[#54aaff] text-[12px] p-[.3vw] rounded-[10vw]">${item_type}</span>
+            <div data-id='${item_code}' class="w-full h-1/2 flex justify-between">
+              <div data-id='${item_code}' class="flex items-center">
+                <span data-id='${item_code}'>${item_code}</span>
+                <span data-id='${item_code}' class="inline-block ml-[2vw] bg-[#edf6ff] text-[#54aaff] text-[12px] p-[.3vw] rounded-[10vw]">${item_type}</span>
               </div>
-              <span class="text-[#a9a9a9] text-[4vw]">近1年</span>
+              <span data-id='${item_code}' class="text-[#a9a9a9] text-[4vw]">近1年</span>
             </div>
         `)
           dataBody_content_item.appendChild(div)
@@ -121,9 +121,9 @@
     let bs = new BScroll('.wrapper1', {
       click: true
     })
-    dataBody_content_item.addEventListener('click', () => {
+    dataBody_content_item.addEventListener('click', (e) => {
       setLocalStorage(value)
-      location.href = './FundDetails.html'
+      location.href = `./FundDetails.html?${e.target.dataset.id ?? e.target.id}`
     })
   }
   function axiosFund(key) {
@@ -132,6 +132,8 @@
     axios
       .post(`/api/action?action_name=fundSearchInfoByName&orderType=2&key=${key}&pageindex=1&pagesize=10`)
       .then(result => {
+        console.log(result.data.data);
+
         initSearchContent(result.data.data, key)
       })
       .catch(err => {
